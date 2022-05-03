@@ -1,5 +1,3 @@
-
-
 print('='*51)
 print('Calculadora Conversora de Sistemas de Numeração')
 print('='*51)
