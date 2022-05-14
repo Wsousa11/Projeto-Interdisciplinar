@@ -1,10 +1,15 @@
-print('='*51)
+'''Elaboração de calculadora de conversão de Números Decimais para: Binário, Octal, Hexadecimal.
+
+Formula de conversão simples, sem utilização de função ou biblioteca para conversão.'''
+
+print('='*47)
 print('Calculadora Conversora de Sistemas de Numeração')
-print('='*51)
+print('='*47)
+print()
 
 while True:
     print('Escolha para qual sistema de numeração você quer converter o número decimal: ')
-    funcao = input('[1] Binario, [2] Octadecimal, [3] Hexadecimal, [4] Sair : ')
+    funcao = input('[1] Binario, [2] Octadecimal, [3] Hexadecimal, [4] Sair : ').strip()
     print()
 
     if funcao != '1' and funcao != '2' and funcao != '3' and funcao != '4':
@@ -14,13 +19,13 @@ while True:
         print('Obrigado por utilizar nosso produto!')
         break
     else:
-        print('Conversão da base decimal para as bases binário, hexadecimal e octadecimal.')
-        num = int(input('Digite um número decimal: '))
+        num = input('Digite um número inteiro e decimal: ').strip().replace(" ", "")
         x = num
-        
-        if num <= 0: print(), print('ERRO - Digite um número inteiro e positivo !!!'), print()    
-        
+        if not num.isdigit(): #testa se o resultado da afirmação é negativo
+            print(), print('ERRO - Digite um número inteiro e positivo !!!'), print()
+
         else:
+            num = int(num)
             if funcao == '1':
                 resultado = ''
                 base = 'Binario'
